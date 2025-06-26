@@ -2,82 +2,134 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: black;
-  font-family: "Press Start 2P", system-ui;
-}
-
-html {
-  font-size: 100%;
 }
 
 body {
+  background-color: black;
+  font-family: "Press Start 2P", system-ui;
+  color: chartreuse;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+header {
+  color: chartreuse;
+  text-align: center;
+  font-size: 32px;
+  padding: 20px;
+}
+
+.board-container {
+  position: relative;
+  width: 100vw;
+  height: 85vh;
+}
+
+.thread-lines {
+  position: absolute;
   width: 100%;
-  max-width: 100vw;
-  font-family: sans-serif;
-}
-header{
-    font-family: "Press Start 2P", system-ui;
-    color: chartreuse;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 35px;
-    font-size: 40px;
-}
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 2rem;
-  justify-content: center;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .member-card {
-  width: 200px;
+  position: absolute;
+  width: 160px;
+  padding: 10px;
   text-align: center;
-  cursor: pointer;
+  border: 3px solid;
+  color: black;
+  background-color: white;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+}
+
+.member-card img {
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+  margin-bottom: 8px;
+}
+
+.green {
+  background-color: #d8ffd8;
   border-color: chartreuse;
-  border-width: 1px;
-  border-style: solid;
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-bottom: 70px;
-  color: chartreuse;
+  color: black;
 }
 
-.member-card:hover {
-  transform: scale(1.05);
+.pink {
+  background-color: #ffc6d1;
+  border-color: deeppink;
+  color: black;
 }
 
+.hud {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  z-index: 3;
+  color: gold;
+}
+
+.hud .hearts {
+  font-size: 18px;
+  color: pink;
+  margin-top: 5px;
+}
 .popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75);
   display: none;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 1000;
-
 }
 
 .popup-content {
+  background-color: black;
+  border: 3px solid chartreuse;
   color: chartreuse;
-  padding: 2rem;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 400px;
-  position: relative;
+  padding: 20px;
   text-align: center;
+  width: 300px;
+  font-family: "Press Start 2P", system-ui;
+  position: relative;
+}
+
+.popup-content img {
+  width: 100%;
+  border: 2px solid chartreuse;
+  margin-bottom: 10px;
+}
+
+.popup-content h2 {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.popup-content h4 {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  font-size: 8px;
 }
 
 .close {
   position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 1.5rem;
+  top: 10px;
+  right: 14px;
+  font-size: 18px;
   cursor: pointer;
 }

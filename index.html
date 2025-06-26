@@ -1,50 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>TEAM INSIDERS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>TEAM INSIDERS</title>
 </head>
 <body>
-    <header>TEAM INSIDERS</header>
-    <div class="cards-container">
-  <div class="member-card" data-name="Member 1" data-role="Role 1" data-info="Info about Member 1">
-    <h3>Member 1</h3>
+  <div class="hud">
+    <div class="coins">🪙🪙🪙</div>
+    <div class="hearts">❤️❤️💔</div>
   </div>
-  <div class="member-card" data-name="Member 2" data-role="Role 2" data-info="Info about Member 2">
-    <h3>Member 2</h3>
-  </div>
-  <div class="member-card" data-name="Member 3" data-role="Role 3" data-info="Info about Member 3">
-    <h3>Member 3</h3>
-  </div>
-  <div class="member-card" data-name="Member 4" data-role="Role 4" data-info="Info about Member 4">
-    <h3>Member 4</h3>
-  </div>
-  <div class="member-card" data-name="Member 5" data-role="Role 5" data-info="Info about Member 5">
-    <h3>Member 5</h3>
-  </div>
-  <div class="member-card" data-name="Member 6" data-role="Role 6" data-info="Info about Member 6">
-    <h3>Member 6</h3>
-  </div>
-</div>
 
-<div class="popup" id="popup">
-  <div class="popup-content">
-    <span class="close" id="closeBtn">&times;</span>
-    <h2 id="popupName"></h2>
-    <h4 id="popupRole"></h4>
-    <p id="popupInfo"></p>
+  <header>TEAM INSIDERS</header>
+
+  <div class="board-container">
+    <svg class="thread-lines">
+      <line x1="50%" y1="45%" x2="30%" y2="30%" stroke="red" stroke-width="2"/>
+      <line x1="50%" y1="45%" x2="70%" y2="30%" stroke="red" stroke-width="2"/>
+      <line x1="50%" y1="45%" x2="25%" y2="70%" stroke="red" stroke-width="2"/>
+      <line x1="50%" y1="45%" x2="75%" y2="70%" stroke="red" stroke-width="2"/>
+      <line x1="50%" y1="45%" x2="90%" y2="30%" stroke="red" stroke-width="2"/>
+    </svg>
+
+    <div class="member-card green center" style="top: 45%; left: 50%;" data-name="Vanshaj Sharma" data-role="GENSEC" data-img="https://robohash.org/vanshaj.png?set=set2&size=150x150">
+      <img src="https://robohash.org/vanshaj.png?set=set2&size=150x150" alt="Vanshaj" />
+      <h3>Vanshaj Sharma</h3>
+      <p>GENSEC</p>
+    </div>
+
+    <div class="member-card green" style="top: 30%; left: 30%;" data-name="Sawaransh Mittal" data-role="TECH-HEAD" data-img="https://robohash.org/sawaransh.png?set=set2&size=150x150">
+      <img src="https://robohash.org/sawaransh.png?set=set2&size=150x150" alt="Sawaransh" />
+      <h3>Sawaransh Mittal</h3>
+      <p>TECH-HEAD</p>
+    </div>
+
+    <div class="member-card green" style="top: 30%; left: 70%;" data-name="Utkarsh Chowdhary" data-role="JOINT GENSEC" data-img="https://robohash.org/utkarsh.png?set=set2&size=150x150">
+      <img src="https://robohash.org/utkarsh.png?set=set2&size=150x150" alt="Utkarsh" />
+      <h3>Utkarsh Chowdhary</h3>
+      <p>JOINT GENSEC</p>
+    </div>
+
+    <div class="member-card pink" style="top: 70%; left: 25%;" data-name="Namrata Aneja" data-role="DESIGN HEAD" data-img="https://robohash.org/namrata.png?set=set2&size=150x150">
+      <img src="https://robohash.org/namrata.png?set=set2&size=150x150" alt="Namrata" />
+      <h3>Namrata Aneja</h3>
+      <p>DESIGN HEAD</p>
+    </div>
+
+    <div class="member-card green" style="top: 70%; left: 75%;" data-name="Shreshth Verma" data-role="MANAGEMENT HEAD" data-img="https://robohash.org/shreshth.png?set=set2&size=150x150">
+      <img src="https://robohash.org/shreshth.png?set=set2&size=150x150" alt="Shreshth" />
+      <h3>Shreshth Verma</h3>
+      <p>MANAGEMENT HEAD</p>
+    </div>
+
+    <div class="member-card pink" style="top: 30%; left: 90%;" data-name="Sania Mahajan" data-role="JOINT TECH-HEAD" data-img="https://robohash.org/sania.png?set=set2&size=150x150">
+      <img src="https://robohash.org/sania.png?set=set2&size=150x150" alt="Sania" />
+      <h3>Sania Mahajan</h3>
+      <p>JOINT TECH-HEAD</p>
+    </div>
   </div>
-</div>
 
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close" id="closeBtn">&times;</span>
+      <img id="popupImg" src="" alt="">
+      <h2 id="popupName"></h2>
+      <h4 id="popupRole"></h4>
+      <p id="popupInfo"></p>
+    </div>
+  </div>
 
-<script src="script.js"></script>
-    
-
-    
+  <script src="script.js"></script>
 </body>
 </html>
