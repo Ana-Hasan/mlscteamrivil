@@ -1,135 +1,112 @@
-* {
-  box-sizing: border-box;
+body {
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: black;
-  font-family: "Press Start 2P", system-ui;
+  background: black;
+  font-family: 'Press Start 2P', system-ui;
   color: chartreuse;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
+  overflow-x: hidden;
 }
 
 header {
-  color: chartreuse;
   text-align: center;
-  font-size: 32px;
-  padding: 20px;
+  font-size: 2rem;
+  color: chartreuse;
+  padding: 2rem 0 1rem;
 }
 
 .board-container {
   position: relative;
   width: 100vw;
-  height: 85vh;
-}
-
-.thread-lines {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
+  height: 90vh;
 }
 
 .member-card {
   position: absolute;
   width: 160px;
-  padding: 10px;
+  background: #000;
+  border: 3px solid chartreuse;
+  color: chartreuse;
+  padding: 12px;
   text-align: center;
-  border: 3px solid;
-  color: black;
-  background-color: white;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 10px;
+  cursor: pointer;
 }
 
 .member-card img {
   width: 100%;
-  height: auto;
-  border: 2px solid black;
-  margin-bottom: 8px;
+  border: 2px solid chartreuse;
+  margin-bottom: 10px;
 }
 
 .green {
-  background-color: #d8ffd8;
-  border-color: chartreuse;
-  color: black;
+  border-color: #99ff99;
+  background-color: #eaffea;
+  color: #111;
 }
 
 .pink {
-  background-color: #ffc6d1;
-  border-color: deeppink;
-  color: black;
+  border-color: #ff69b4;
+  background-color: #ffe0ef;
+  color: #111;
 }
 
-.hud {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 20px;
-  z-index: 3;
-  color: gold;
-}
-
-.hud .hearts {
-  font-size: 18px;
-  color: pink;
-  margin-top: 5px;
-}
 .popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0,0,0,0.8);
   display: none;
-  justify-content: center;
   align-items: center;
-  z-index: 1000;
+  justify-content: center;
+  z-index: 10;
 }
 
 .popup-content {
-  background-color: black;
-  border: 3px solid chartreuse;
+  background: #111;
   color: chartreuse;
-  padding: 20px;
+  padding: 2rem;
   text-align: center;
-  width: 300px;
-  font-family: "Press Start 2P", system-ui;
-  position: relative;
+  max-width: 400px;
+  border: 3px solid chartreuse;
 }
 
 .popup-content img {
-  width: 100%;
+  width: 150px;
+  margin-bottom: 1rem;
   border: 2px solid chartreuse;
-  margin-bottom: 10px;
-}
-
-.popup-content h2 {
-  font-size: 12px;
-  margin-bottom: 10px;
-}
-
-.popup-content h4 {
-  font-size: 10px;
-  margin-bottom: 10px;
-}
-
-.popup-content p {
-  font-size: 8px;
 }
 
 .close {
   position: absolute;
-  top: 10px;
-  right: 14px;
-  font-size: 18px;
+  top: 20px;
+  right: 30px;
+  font-size: 24px;
   cursor: pointer;
+  color: chartreuse;
+}
+
+.thread-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hud {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  color: gold;
+  z-index: 100;
+}
+
+.coins {
+  margin-bottom: 10px;
 }
